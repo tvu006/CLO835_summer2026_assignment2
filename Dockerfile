@@ -8,3 +8,10 @@
 # RUN <build your app, if it needs a build step>
 # EXPOSE 8080
 # CMD ["<command that starts your app>"]
+
+FROM python:3.14-slim
+WORKDIR /app
+COPY apps/python/ /app/
+RUN pip install flask
+EXPOSE 8080
+CMD ["python", "app.py"]
