@@ -24,11 +24,11 @@ jobs:
       #       tagged with the app version (e.g. 0.2) AND the commit SHA
       - name: Build image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/clo835-a2:0.2 .
-          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/clo835-a2:0.2 \
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/clo835-a2:0.3 .
+          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/clo835-a2:0.3 \
                      ${{ secrets.DOCKERHUB_USERNAME }}/clo835-a2:${{ github.sha }}
 
       - name: Push image
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/clo835-a2:0.2
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/clo835-a2:0.3
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/clo835-a2:${{ github.sha }}
