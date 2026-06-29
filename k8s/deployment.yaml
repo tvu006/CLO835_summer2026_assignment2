@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: clo835-a2-app
-          image: tvu27/clo835-a2:0.3
+          image: tvu27/clo835-a2:0.2
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
